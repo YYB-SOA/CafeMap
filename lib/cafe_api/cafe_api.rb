@@ -62,6 +62,7 @@ end
 
 
 
+<<<<<<< HEAD
 # def call_cafe_url(url) # 抓 cafe api
 #   # input url; output JSON Array
 #   uri = URI.parse(url)
@@ -85,6 +86,8 @@ end
 # "latitude":"23.48386540","longitude":"120.45358340","limited_time":"maybe",
 # "socket":"maybe","standing_desk":"no","mrt":"","open_time":"11:30~21:00"}
 
+=======
+>>>>>>> 6a5936f1e37d6956adefba91c5f9a07d803ef75c
 def call_cafe_url(url) # 抓 cafe api
   # input url; output JSON Array
   uri = URI.parse(url)
@@ -102,7 +105,7 @@ def json_array_to_json(cafe_json)
 
   new_hash = {}
   # 如果叫進來的 cafe_json 沒東西，把 new_hash 的 status 設為 fail；有東西則設為 ok 
-  cafe_json.nil?? new_hash["status"] = "Fail": new_hash["status"] = "ok" 
+  cafe_json.nil?? new_hash["status"] = "Fail": new_hash["status"] = "ok"  # rubocop:disable Lint/Syntax
   new_hash['row_data'] = cafe_json
   new_hash
 end
