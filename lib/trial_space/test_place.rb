@@ -7,13 +7,9 @@ require_relative '../place_api/place_api'
 require 'http'
 require 'json'
 
-require_relative '../place_api/store'
-require_relative '../place_api/reviews'
-require_relative '../place_api/cafefilter'
-
+require_relative 'place_api'
 
 # api跑完後的結果
-CORRECT = YAML.safe_load(File.read('spec/fixtures/cafe_place_api_results_new.yml'))
 token_name = 'Place_api'
 
 #測試

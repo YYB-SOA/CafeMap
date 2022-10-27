@@ -23,3 +23,8 @@ gem 'rubocop'
 
 # Parsing
 gem 'json'
+
+
+# strict scheme
+gem'dry-types'
+gem 'dry-struct'
