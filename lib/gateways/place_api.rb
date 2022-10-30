@@ -42,7 +42,7 @@ module CafeMap
 
         def request_main(name_of_key = @token_name, name_array = @store_namearr, safty: true)
           # Caution: We set "safty" for avoid overcharging from placeAPI: do not chage it for testing
-          name_array = %w[陶匠咖啡 過日子咖啡館] if safty == true
+          name_array = name_array[..10] if safty == true
 
           data_clean(name_array).map do |eachstore|
             call_placeapi_url(eachstore, get_placeapi_token(name_of_key)).parse
