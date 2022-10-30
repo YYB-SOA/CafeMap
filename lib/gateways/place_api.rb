@@ -27,8 +27,7 @@ module CafeMap
         end
 
         def call_placeapi_url(input, token)
-          http_response =
-            HTTP.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=#{input}&key=#{token}&language=zh-TW")
+          http_response = HTTP.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=#{input}&key=#{token}&language=zh-TW")
 
           Response.new(http_response).tap do |response|
             raise(response.error) unless response.successful?
@@ -36,7 +35,7 @@ module CafeMap
         end
 
         def noise_filter(name_str)
-          # Normalization
+          # Regularization
           name_str.gsub('()', '').gsub(' ', '').gsub("\b", '')
         end
 

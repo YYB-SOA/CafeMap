@@ -10,7 +10,7 @@ require 'minitest/rg'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/cafe_api/cafe_api'
+require_relative '../../lib/gateways/cafe_api.rb'
 CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
 
 CAFE_TOKEN = 'Cafe_api' # CONFIG['CAFE_NOMAD'][0]['Cafe_api']

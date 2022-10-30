@@ -42,7 +42,7 @@ module CafeMap
     end
 
     class CafeYaml
-      # 這邊丟進來的東西應該要是一個 json array
+      # Input: json array
       def initialize(data)
         @data = data
       end
