@@ -18,12 +18,12 @@ module PlaceInfo
     end
 
     def store(word_term = @word_term, token_name = @token_name)
-      response = Request.new(word_term, token_name).request_main # 傳入token
+      response = Request.new(word_term, token_name).request_main
       Store.new(response, self)
     end
 
     def reviews(wordterm = @word_term, tokenname = @token_name)
-      review_response = Request.new(wordterm, tokenname).request_main # 傳入token
+      review_response = Request.new(wordterm, tokenname).request_main
       Reviews.new(review_response)
     end
 
@@ -31,7 +31,7 @@ module PlaceInfo
     class Request
       def initialize(word_term, token_name)
         @word_term = word_term
-        @token_name = token_name # @token_name ＝'Place_api' #要改 #之後需要從spec_helper直接取token
+        @token_name = token_name 
       end
 
       def get_placeapi_token(name_of_key = @token_name)
