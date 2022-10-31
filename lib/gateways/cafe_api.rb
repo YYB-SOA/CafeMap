@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'net/http'
-require "yaml"
-require "json"
+require 'yaml'
+require 'json'
 
 module CafeMap
   module CafeNomad
@@ -12,6 +12,7 @@ module CafeMap
         @tokename = tokename
         @cafenomaf_api = Request.new(@tokename).get # return will be jason array.
       end
+
       def cafe_status
         CafeYaml.new(@cafenomaf_api).jsonarray_to_ymal
       end
@@ -46,7 +47,8 @@ module CafeMap
       def initialize(data)
         @data = data
       end
-      def jsonarray_to_ymal()
+
+      def jsonarray_to_ymal
         @store = {}
         @store['status'] = 'ok' unless @data.nil?
         @store['amount'] = @data.length

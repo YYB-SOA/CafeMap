@@ -23,7 +23,7 @@ describe 'Tests Place API library' do
   describe 'Store information' do
 
     before do
-      test_store = ["陶匠咖啡", "WHO'S喜象CAFE", '過日子咖啡館']
+      test_store = ["陶匠咖啡", '過日子咖啡館']
       @store = CafeMap::Place::StoreMapper.new(TOKEN_NAME, test_store).load_several
       @yaml_keys = CORRECT.keys[0..].each{|key| CORRECT[key]['results']}
 
@@ -42,3 +42,19 @@ describe 'Tests Place API library' do
     end
   end
 end
+
+
+
+
+# it 'HAPPY: should provide correct Shop attributes' do
+#   # PlaceApi會繼承module Store class 的特定參數，目前store檔案只有傳入store_yaml，可能不適合
+#   store = PlaceInfo::PlaceApi.new(KEYWORD_FILTER, TOKEN_NAME).store(KEYWORD_FILTER,TOKEN_NAME)
+#   array_hash = CORRECT_STORE[0..].map{|key| CORRECT[key]['results']}
+
+#   _(store.place_id.must_equal array_hash.map{|item|item.map{|i| i['place_id']} }[0][0])
+#   _(store.business_status.must_equal array_hash.map{|item|item.map{|i| i['business_status']} }[0][0])
+#   # Location 在不同層
+#   _(store.location_lat.must_equal array_hash.map{|item|item.map{|i| i['geometry']['location']['lat']} }[0][0])
+#   _(store.location_lng.must_equal array_hash.map{|item|item.map{|i| i['geometry']['location']['lng']} }[0][0])
+
+# end
