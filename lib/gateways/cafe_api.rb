@@ -6,7 +6,7 @@ require 'json'
 
 module CafeMap
   module CafeNomad
-    class Api
+    class Api # rubocop:disable Style/Documentation
       # Take the tokem to get the api. should be "Cafe_api" here.
       def initialize(tokename)
         @tokename = tokename
@@ -22,7 +22,7 @@ module CafeMap
       end
     end
 
-    class Request
+    class Request # rubocop:disable Style/Documentation
       # should be 'Cafe_api'
       def initialize(tokename)
         @tokename = tokename
@@ -42,7 +42,7 @@ module CafeMap
       end
     end
 
-    class CafeYaml
+    class CafeYaml # rubocop:disable Style/Documentation
       # Input: json array
       def initialize(data)
         @data = data

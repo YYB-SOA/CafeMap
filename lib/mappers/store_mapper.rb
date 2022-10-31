@@ -15,6 +15,10 @@ module CafeMap
         @gateway = @gateway_class.new(@token_name, @store_namearr)
       end
 
+      def bad_request
+        @gateway.store(@token_name, @store_namearr)[0]['status']
+      end
+
       def load_several
         @gateway.store(@token_name, @store_namearr).map do |each_store|
           data = each_store['results'][0]

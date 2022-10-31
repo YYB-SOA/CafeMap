@@ -21,37 +21,31 @@ describe 'Tests Place API library' do
   end
 
   describe 'Store information' do
-
     before do
-      test_store = ["陶匠咖啡", '過日子咖啡館']
-      @cafe_info = CafeMap::CafeNomad::StoreMapper.new('Cafe_api').load_several
-      @yaml_keys = CORRECT.keys[3..]
+      # test_store = ["WHO'S 喜象 CAFE", 'ARTROOM14藝室']
+      @store = CafeMap::Place::StoreMapper.new(TOKEN_NAME, TEST_STORE).load_several
+      @yaml_keys = CORRECT_STORE[0..].map { |key| CORRECT[key]['results'] }
     end
-# @yaml_keys.map { |item| CORRECT[item]['id'] }
 
     it 'HAPPY: should provide correct Store attributes' do
-      _( @store.place_id.must_equal ans_sheet('place_id', @yaml_keys))
-      # _( @store.place_id.must_equal @yaml_keys.each{|item|item.each{|i| i['place_id']} })
-      _( @store.business_status.must_equal @yaml_keys.map{|item|item.map{|i| i['business_status']} }[0][0])
-      _( @store.location_lat.must_equal @yaml_keys.map{|item|item.map{|i| i['geometry']['location']['lat']} }[0][0])
-      _( @store.location_lng.must_equal @yaml_keys.map{|item|item.map{|i| i['geometry']['location']['lng']} }[0][0])
+      _(@store.map { |item| item }[0].place_id.must_equal(@yaml_keys.map do |item|
+                                                            item.map do |i|
+                                                              i['place_id']
+                                                            end
+                                                          end[0][0]))
+    end
 
+    it 'HAPPY: should provide correct Store attributes' do
+      _(@store.map { |item| item }[0].rating.must_equal(@yaml_keys.map do |item|
+                                                          item.map do |i|
+                                                            i['rating']
+                                                          end
+                                                        end[0][0]))
+    end
+
+    it 'BAD: should raise exception on incorrect invalid result' do
+      bad = CafeMap::Place::StoreMapper.new(TOKEN_NAME, FAKE_TEST_STORE).bad_request
+      _(bad).must_equal INCORRECT['INVALID_REQUEST']['status']
     end
   end
 end
-
-
-
-
-# it 'HAPPY: should provide correct Shop attributes' do
-#   # PlaceApi會繼承module Store class 的特定參數，目前store檔案只有傳入store_yaml，可能不適合
-#   store = PlaceInfo::PlaceApi.new(KEYWORD_FILTER, TOKEN_NAME).store(KEYWORD_FILTER,TOKEN_NAME)
-#   array_hash = CORRECT_STORE[0..].map{|key| CORRECT[key]['results']}
-
-#   _(store.place_id.must_equal array_hash.map{|item|item.map{|i| i['place_id']} }[0][0])
-#   _(store.business_status.must_equal array_hash.map{|item|item.map{|i| i['business_status']} }[0][0])
-#   # Location 在不同層
-#   _(store.location_lat.must_equal array_hash.map{|item|item.map{|i| i['geometry']['location']['lat']} }[0][0])
-#   _(store.location_lng.must_equal array_hash.map{|item|item.map{|i| i['geometry']['location']['lng']} }[0][0])
-
-# end

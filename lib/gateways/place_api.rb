@@ -12,14 +12,14 @@ module CafeMap
         @store_namearr = store_namearr
       end
 
-      def store()
-        Request.new(@token_name, @store_namearr).request_main() # Array
+      def store(token_name = @token_name, name_arr = @store_namearr)
+        Request.new(token_name, name_arr).request_main # Array
       end
 
       # Sends out HTTP requests to Google Place API
       class Request
-        def initialize(token_name, store_namearr )
-          @token_name = token_name # @token_name ＝'Place_api'
+        def initialize(token_name, store_namearr)
+          @token_name = token_name
           @store_namearr = store_namearr
         end
 
@@ -29,29 +29,30 @@ module CafeMap
         end
 
         def call_placeapi_url(input, token)
-          puts "call_placeapi_url: #{input}"
-          puts "token is nil?: #{token.nil?}"
-
-          http_response = HTTP.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=#{input}&key=#{token}&language=zh-TW")
+          http_response =
+            HTTP.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=#{input}&key=#{token}&language=zh-TW")
 
           Response.new(http_response).tap do |response|
             raise(response.error) unless response.successful?
           end
         end
 
-        def data_clean(box)
-          # Input: string array of cafe name
-          box.map { |name_str| name_str.gsub('()', '').gsub(' ', '').gsub("\b", '') }
+        def noise_filter(name_str)
+          # Normalization
+          name_str.gsub('()', '').gsub(' ', '').gsub("\b", '')
         end
 
-        def request_main(safty = 1)
-          # Caution: We set "safty" for avoid overcharging from placeAPI: do not chage it for testing
-          name_array =  @store_namearr[..safty]
-          data_clean(name_array).each do |eachstore|
-            puts "request_main: #{eachstore}"
-            call_placeapi_url(eachstore, get_placeapi_token(@token_name)).parse
+        def data_clean(box)
+          # Input: string array of cafe name
+          box.map { |name_str| noise_filter(name_str) }
+        end
+
+        def request_main(name_of_key = @token_name, name_array = @store_namearr)
+          cafe_clean_name = data_clean(name_array)
+          cafe_clean_name.map do |eachstore|
+            call_placeapi_url(eachstore, get_placeapi_token(name_of_key)).parse
           end
-        endgit 
+        end
       end
 
       # Decorates HTTP responses  with success/error reporting
