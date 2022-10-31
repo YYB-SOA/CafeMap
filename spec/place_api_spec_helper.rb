@@ -31,7 +31,7 @@ CASSETTE_FILE = 'place_api'
 def ans_sheet(target_attr, data_keys)
 # This func is to replace the original duplicate code below:
 # @yaml_keys.map { |item| CORRECT[item]['id'] }
-    data_keys.map do |item|
-      CORRECT[item][target_attr]
-    end
+  data_keys.map do |item|
+    CORRECT[item][target_attr]
   end
+end
