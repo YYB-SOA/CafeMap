@@ -5,7 +5,7 @@ require 'sequel'
 module CafeMap
   module Database
     # Object Relational Mapper for Project Entities
-    class NomadOrm < Sequel::Model(:projects)
+    class InfoOrm < Sequel::Model(:info)
       one_to_one :owner,
                   class: :'CafeMap::Database::PlaceOrm'
 

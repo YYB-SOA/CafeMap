@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module CodePraise
+module CafeMap
     module Repository
       # Repository for Members
-      class Members
+      class Info
         def self.find_id(id)
           rebuild_entity Database::MemberOrm.first(id:)
         end
