@@ -2,11 +2,12 @@
 
 require 'sequel'
 
+
 Sequel.migration do
   change do
     create_table(:store) do
       primary_key :name
-
+      # foreign_key :info_id, :info
       String      :place_id
       String      :formatted_address
       String      :location_lat

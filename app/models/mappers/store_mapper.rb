@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-require_relative '../gateways/place_api'
+# require_relative '../gateways/place_api'
 require_relative '../entities/store'
 
 module CafeMap
