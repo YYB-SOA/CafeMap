@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/cafenomad/mappers/info_mapper.rb": {
+      "/home/timbclin/CafeMap/app/domain/cafenomad/mappers/info_mapper.rb": {
         "lines": [
           null,
           null,
@@ -66,7 +66,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/infrastructure/cafenomad/cafe_api.rb": {
+      "/home/timbclin/CafeMap/app/infrastructure/cafenomad/cafe_api.rb": {
         "lines": [
           null,
           null,
@@ -124,7 +124,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/cafenomad/entities/info.rb": {
+      "/home/timbclin/CafeMap/app/domain/cafenomad/entities/info.rb": {
         "lines": [
           null,
           null,
@@ -165,7 +165,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/googleplace/entities/store.rb": {
+      "/home/timbclin/CafeMap/app/domain/googleplace/entities/store.rb": {
         "lines": [
           null,
           null,
@@ -195,7 +195,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/cafenomad/mappers/mixin_module.rb": {
+      "/home/timbclin/CafeMap/app/domain/cafenomad/mappers/mixin_module.rb": {
         "lines": [
           null,
           null,
@@ -312,7 +312,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/config/environment.rb": {
+      "/home/timbclin/CafeMap/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -321,20 +321,6 @@
           1,
           1,
           1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
           1,
           null,
           1,
@@ -343,16 +329,35 @@
           1,
           null,
           null,
+          1,
+          null,
+          1,
+          null,
+          null,
           null,
           1,
           1,
           null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
           null,
           null,
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/require_app.rb": {
+      "/home/timbclin/CafeMap/require_app.rb": {
         "lines": [
           null,
           null,
@@ -366,7 +371,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/infrastructure/database/info_orm.rb": {
+      "/home/timbclin/CafeMap/app/infrastructure/database/info_orm.rb": {
         "lines": [
           null,
           null,
@@ -394,7 +399,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/infrastructure/database/store_orm.rb": {
+      "/home/timbclin/CafeMap/app/infrastructure/database/store_orm.rb": {
         "lines": [
           null,
           null,
@@ -414,7 +419,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/infrastructure/google/place_api.rb": {
+      "/home/timbclin/CafeMap/app/infrastructure/google/place_api.rb": {
         "lines": [
           null,
           null,
@@ -483,8 +488,10 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/infrastructure/userip/userip.rb": {
+      "/home/timbclin/CafeMap/app/infrastructure/userip/userip.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -501,7 +508,6 @@
           null,
           null,
           1,
-          0,
           null,
           1,
           0,
@@ -511,29 +517,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/presentation/view_object/city_names.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/presentation/view_object/stat_infos.rb": {
+      "/home/timbclin/CafeMap/app/presentation/view_object/city_names.rb": {
         "lines": [
           null,
           null,
@@ -547,6 +531,29 @@
           1,
           0,
           null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/timbclin/CafeMap/app/presentation/view_object/stat_infos.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
           null,
           1,
           0,
@@ -581,7 +588,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/presentation/view_object/stat_stores.rb": {
+      "/home/timbclin/CafeMap/app/presentation/view_object/stat_stores.rb": {
         "lines": [
           null,
           null,
@@ -638,7 +645,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/cafenomad/init.rb": {
+      "/home/timbclin/CafeMap/app/domain/cafenomad/init.rb": {
         "lines": [
           null,
           null,
@@ -650,7 +657,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/cafenomad/repositories/for.rb": {
+      "/home/timbclin/CafeMap/app/domain/cafenomad/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -678,112 +685,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/cafenomad/repositories/infos.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/googleplace/repositories/stores.rb": {
+      "/home/timbclin/CafeMap/app/domain/cafenomad/repositories/infos.rb": {
         "lines": [
           null,
           null,
@@ -815,6 +717,111 @@
           0,
           null,
           null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/timbclin/CafeMap/app/domain/googleplace/repositories/stores.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
           null,
           1,
           0,
@@ -867,7 +874,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/googleplace/init.rb": {
+      "/home/timbclin/CafeMap/app/domain/googleplace/init.rb": {
         "lines": [
           null,
           null,
@@ -879,7 +886,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/googleplace/mappers/store_mapper.rb": {
+      "/home/timbclin/CafeMap/app/domain/googleplace/mappers/store_mapper.rb": {
         "lines": [
           null,
           null,
@@ -938,7 +945,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/googleplace/mappers/storemixin.rb": {
+      "/home/timbclin/CafeMap/app/domain/googleplace/mappers/storemixin.rb": {
         "lines": [
           null,
           null,
@@ -975,7 +982,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/domain/init.rb": {
+      "/home/timbclin/CafeMap/app/domain/init.rb": {
         "lines": [
           null,
           null,
@@ -987,7 +994,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/app/controllers/app.rb": {
+      "/home/timbclin/CafeMap/app/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -1027,8 +1034,6 @@
           0,
           0,
           0,
-          0,
-          null,
           null,
           null,
           null,
@@ -1090,7 +1095,6 @@
           0,
           null,
           null,
-          null,
           0,
           null,
           null,
@@ -1135,7 +1139,6 @@
           0,
           0,
           null,
-          0,
           0,
           0,
           0,
@@ -1150,7 +1153,7 @@
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/spec/helpers/database_helper.rb": {
+      "/home/timbclin/CafeMap/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -1161,15 +1164,15 @@
           null,
           1,
           null,
-          2,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       },
-      "/mnt/c/Users/LeoShr/p_space/NTHU/2022_SOA/group_proj/CafeMap/spec/helpers/vcr_helper.rb": {
+      "/home/timbclin/CafeMap/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -1223,7 +1226,7 @@
         ]
       }
     },
-    "timestamp": 1668928886
+    "timestamp": 1669381006
   },
   "Minitest": {
     "coverage": {

@@ -5,6 +5,7 @@ require 'roda'
 require 'sequel'
 require 'yaml'
 require 'rack/session'
+require 'logger'
 
 module CafeMap
   # Configuration for the App
@@ -24,13 +25,17 @@ module CafeMap
       use Rack::Session::Cookie, secret: config.SESSION_SECRET
 
       configure :development, :test do
+        require 'pry'; # for breakpoints
         ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"
       end
 
       # Database Setup
       DB = Sequel.connect(ENV.fetch('DATABASE_URL'))
       def self.DB = DB # rubocop:disable Naming/MethodName
+
+      # Logger Setup
+      LOGGER = Logger.new($stderr)
+      def self.logger = LOGGER
     end
-    # rubocop:enable Lint/ConstantDefinitionInBlock
   end
 end
