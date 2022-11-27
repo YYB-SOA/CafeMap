@@ -23,7 +23,7 @@ describe 'Integration Tests of Cafe API and Database' do
     it 'HAPPY: should be able to save Info from CafeNomad to database' do
       info = CafeMap::CafeNomad::InfoMapper.new(CAFE_TOKEN).load_several
       info.each do |each_info|
-        rebuilt = Repository::For.entity(info).create(each_info)
+        rebuilt = CafeMap::Repository::For.entity(info).create(each_info)
         _(rebuilt.infoid).must_equal(each_info.infoid)
         _(rebuilt.name).must_equal(each_info.name)
         _(rebuilt.wifi).must_equal(each_info.wifi)
